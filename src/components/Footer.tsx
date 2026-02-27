@@ -7,7 +7,7 @@ const Footer = () => (
   <>
     <footer className="border-t border-border py-10 px-4">
       <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
-        <img src={logo} alt="CM Eletrônicos" className="h-10" />
+        <img src={logo} alt="CM Eletrônicos" className="h-14" />
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <a
