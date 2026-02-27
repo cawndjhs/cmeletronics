@@ -19,7 +19,7 @@ const Header = () => {
       <div className="container mx-auto max-w-6xl flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <a href="#inicio" className="flex items-center">
-          <img src={logo} alt="CM Eletrônicos" className="h-10" />
+          <img src={logo} alt="CM Eletrônicos" className="h-14" />
         </a>
 
         {/* Desktop nav */}
