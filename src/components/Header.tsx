@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const WHATSAPP_BASE = "https://wa.me/5581SEUNUMEROAQUI";
 
@@ -17,8 +18,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto max-w-6xl flex items-center justify-between px-4 py-3">
         {/* Logo */}
-        <a href="#inicio" className="font-display text-xl font-bold text-primary neon-text">
-          CM Eletrônicos
+        <a href="#inicio" className="flex items-center">
+          <img src={logo} alt="CM Eletrônicos" className="h-10" />
         </a>
 
         {/* Desktop nav */}

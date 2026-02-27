@@ -1,4 +1,5 @@
 import { Instagram, MapPin, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const WHATSAPP_BASE = "https://wa.me/5581SEUNUMEROAQUI";
 
@@ -6,7 +7,7 @@ const Footer = () => (
   <>
     <footer className="border-t border-border py-10 px-4">
       <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
-        <span className="font-display text-primary font-bold text-lg">CM Eletrônicos</span>
+        <img src={logo} alt="CM Eletrônicos" className="h-10" />
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <a
