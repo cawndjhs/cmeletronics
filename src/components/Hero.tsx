@@ -1,6 +1,6 @@
 import heroBanner from "@/assets/hero-banner.jpg";
 
-const WHATSAPP_BASE = "https://wa.me/5581SEUNUMEROAQUI";
+const WHATSAPP_BASE = "https://wa.me/5581994692735";
 
 const Hero = () => (
   <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">

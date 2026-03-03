@@ -11,7 +11,7 @@ const Features = () => (
   <section className="py-20 px-4 bg-secondary/50">
     <div className="container mx-auto max-w-6xl">
       <h2 className="text-2xl md:text-3xl font-display text-center mb-12 neon-text">
-        Por que escolher a CM Eletrônicos?
+        Por que escolher a CM Eletronics?
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((f, i) => (

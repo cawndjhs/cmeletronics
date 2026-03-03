@@ -1,13 +1,13 @@
 import { Instagram, MapPin, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const WHATSAPP_BASE = "https://wa.me/5581SEUNUMEROAQUI";
+const WHATSAPP_BASE = "https://wa.me/5581994692735";
 
 const Footer = () => (
   <>
     <footer className="border-t border-border py-10 px-4">
       <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
-        <img src={logo} alt="CM Eletrônicos" className="h-14" />
+        <img src={logo} alt="CM Eletronics" className="h-14" />
 
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <a
@@ -26,7 +26,7 @@ const Footer = () => (
         </div>
 
         <span className="text-xs text-muted-foreground/60">
-          © {new Date().getFullYear()} CM Eletrônicos. Todos os direitos reservados.
+          © {new Date().getFullYear()} CM Eletronics. Todos os direitos reservados.
         </span>
       </div>
     </footer>
