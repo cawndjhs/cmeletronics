@@ -1,31 +1,112 @@
-import productHeadphone from "@/assets/product-headphone.jpg";
-import productSmartphone from "@/assets/product-smartphone.jpg";
-import productSmartwatch from "@/assets/product-smartwatch.jpg";
+import p9Prata from "@/assets/fones/p9/p9-prata.png";
+import p9Preto from "@/assets/fones/p9/p9-preto.png";
+import p9Rosa from "@/assets/fones/p9/p9-rosa.png";
+import p9Azul from "@/assets/fones/p9/p9-azul.png";
+import p9Verde from "@/assets/fones/p9/p9-verde.png";
+
+import lePreto from "@/assets/fones/le0271/le-preto.png";
+import leVermelho from "@/assets/fones/le0271/le-vermelho.png";
+import leVerde from "@/assets/fones/le0271/le-verde.png";
+
+import cartFibCarbImg1 from "@/assets/carteira-fib-carb/img1.jpg";
+import cartFibCarbImg2 from "@/assets/carteira-fib-carb/img2.jpg";
+import cartFibCarbImg3 from "@/assets/carteira-fib-carb/img3.jpg";
+import cartFibCarbImg4 from "@/assets/carteira-fib-carb/img4.jpg";
+import cartFibCarbImg5 from "@/assets/carteira-fib-carb/img5.jpg";
+
 import productSpeaker from "@/assets/product-speaker.jpg";
 import productLed from "@/assets/product-led.jpg";
 import productCharger from "@/assets/product-charger.jpg";
 import { MessageCircle } from "lucide-react";
+import { useState } from "react";
 
-const WHATSAPP_BASE = "https://wa.me/5581SEUNUMEROAQUI";
+const WHATSAPP_BASE = "https://wa.me/5581994692735";
+
+const Carousel = ({ images, name }) => {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const next = () => {
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <div className="w-full h-full relative group">
+      <img
+        src={images[current]}
+        alt={name}
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+
+      {/* Botão Esquerda */}
+      <button
+        onClick={prev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition"
+      >
+        &lt;
+      </button>
+
+      {/* Botão Direita */}
+      <button
+        onClick={next}
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition"
+        >
+          &gt;
+
+      </button>
+
+      {/* Indicadores */}
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+        {images.map((_, i) => (
+          <div
+            key={i}
+            className={`w-2 h-2 rounded-full ${
+              i === current ? "bg-white" : "bg-white/40"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 
 const products = [
   {
-    name: "Fone Bluetooth Pro",
-    desc: "Som cristalino com cancelamento de ruído",
-    price: "R$ 129,90",
-    image: productHeadphone,
+    name: "FONE DE OUVIDO BLUETOOTH P9",
+    desc: "Som cristalino | estiloso | suporte à cartão SD",
+    price: "R$ 60,00",
+    images: [
+      p9Prata,
+      p9Preto,
+      p9Rosa,
+      p9Azul,
+      p9Verde,
+    ]
   },
   {
-    name: "Smartphone Ultra X",
-    desc: "Tela AMOLED, 128GB, câmera tripla",
-    price: "R$ 1.299,00",
-    image: productSmartphone,
+    name: "FONE GAMER INTRA-AURICULAR LE-0271",
+    desc: "Som imersivo & espacial | microfone + borrachinhas extras",
+    price: "R$ 40,00",
+    images: [
+      lePreto,
+      leVermelho,
+      leVerde,
+    ]
   },
   {
-    name: "Smartwatch Fit",
-    desc: "Monitor cardíaco, GPS e resistente à água",
-    price: "R$ 249,90",
-    image: productSmartwatch,
+    name: "CARTEIRA DE FIBRA DE CARBONO",
+    desc: "Estilosa | proteção RFID | praticidade",
+    price: "R$ 25,00",
+    images: [
+      cartFibCarbImg5,
+      cartFibCarbImg4,
+      cartFibCarbImg3,
+      cartFibCarbImg2,
+    ]
   },
   {
     name: "Caixa de Som Portátil",
@@ -65,12 +146,16 @@ const Products = () => (
             style={{ animationDelay: `${i * 0.1}s` }}
           >
             <div className="aspect-square overflow-hidden bg-secondary">
-              <img
-                src={p.image}
-                alt={p.name}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                loading="lazy"
-              />
+              {p.images ? (
+                <Carousel images={p.images} name={p.name}/>
+              ) : (
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  loading="lazy"
+                />
+              )}
             </div>
             <div className="p-5">
               <h3 className="font-display text-sm font-semibold mb-1">{p.name}</h3>

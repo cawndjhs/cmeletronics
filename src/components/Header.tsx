@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const WHATSAPP_BASE = "https://wa.me/5581SEUNUMEROAQUI";
+const WHATSAPP_BASE = "https://wa.me/5581994692735";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -19,7 +19,7 @@ const Header = () => {
       <div className="container mx-auto max-w-6xl flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <a href="#inicio" className="flex items-center">
-          <img src={logo} alt="CM Eletrônicos" className="h-14" />
+          <img src={logo} alt="CM Eletronics" className="h-14" />
         </a>
 
         {/* Desktop nav */}
